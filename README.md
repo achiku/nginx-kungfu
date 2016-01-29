@@ -20,7 +20,7 @@ Copyright (C) 2014-2016 Tatsuhiko Kubo <cubicdaiya@gmail.com>
 
 ```
 $ export NGINX_KUNGFU_DIR=$(pwd)
-$ ./bin/nginx-build -d work -c config.sh
+$ ./bin/nginx-build -d work -c build-config.sh
 $ cd work/nginx/1.9.10/nginx-1.9.10
 $ make install
 ```
