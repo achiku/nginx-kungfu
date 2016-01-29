@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.6.7
+VERSION=0.6.8
 
 if [[ ! -d ./bin ]]; then 
     mkdir ./bin
@@ -11,3 +11,7 @@ wget https://github.com/cubicdaiya/nginx-build/releases/download/v${VERSION}/ngi
     tar xvfz ${VERSION}.tar.gz
     rm ${VERSION}.tar.gz
 )
+
+for d in 'tmp run log work etc'; do
+    mkdir -p ${d}
+done

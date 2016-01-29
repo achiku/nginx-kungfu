@@ -63,3 +63,7 @@ target/
 
 bin
 nginx
+etc
+log
+run
+lock

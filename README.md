@@ -11,7 +11,7 @@ $ ./install-nginx-build.sh
 
 ```
 $ ./bin/nginx-build --version
-nginx-build 0.6.7
+nginx-build 0.6.8
 Compiler: gc go1.5.3
 Copyright (C) 2014-2016 Tatsuhiko Kubo <cubicdaiya@gmail.com>
 ```
@@ -19,5 +19,7 @@ Copyright (C) 2014-2016 Tatsuhiko Kubo <cubicdaiya@gmail.com>
 ## Install nginx
 
 ```
-$ ./bin/nginx-build -d .
+$ ./bin/nginx-build -d work -c config.sh
+$ cd work/nginx/1.9.10/nginx-1.9.10
+$ make install
 ```
