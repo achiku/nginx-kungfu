@@ -19,7 +19,14 @@ Copyright (C) 2014-2016 Tatsuhiko Kubo <cubicdaiya@gmail.com>
 ## Install nginx
 
 ```
+$ export NGINX_KUNGFU_DIR=$(pwd)
 $ ./bin/nginx-build -d work -c config.sh
 $ cd work/nginx/1.9.10/nginx-1.9.10
 $ make install
+```
+
+## Start nginx
+
+```
+$ ./bin/nginx -g "daemon off;"
 ```
