@@ -1,16 +1,18 @@
 VERSION=0.0.1
 
 start:
-	./bin/nginx
+	PREFIX=`pwd` && ./bin/nginx -p $$PREFIX
+	ps awux | grep nginx | grep -v grep | grep -v watchmedo
 
 stop:
 	./bin/nginx -s stop
+	ps awux | grep nginx | grep -v grep | grep -v watchmedo
 
 reload:
 	./bin/nginx -s reload
 
 tail:
-	tail -f ./log/access ./log/error.log
+	tail -f ./log/access.log ./log/error.log
 
 build:
 	./install-nginx-build.sh
