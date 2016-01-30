@@ -10,6 +10,7 @@ I really wanted to get quick feedback from nginx config modification + nginx-lua
 ## Quick start
 
 ```
+$ pip install -r requirements.txt
 $ make build
 $ cp nginx.conf ./etc/nginx.conf
 $ make start
