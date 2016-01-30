@@ -2,6 +2,22 @@
 
 Practice makes perfect
 
+## Why created
+
+I really wanted to get quick feedback from nginx config modification + nginx-lua/nginx-mruby scripts, and test it like I do when writing other programming language.
+
+
+## Quick start
+
+```
+$ make build
+$ cp nginx.conf ./etc/nginx.conf
+$ make start
+$ make watch
+$ curl http://localhost:8099
+$ // modify and save nginx.conf then nginx reloads its config automatically
+```
+
 
 ## Install nginx-build
 
@@ -28,5 +44,17 @@ $ make install
 ## Start nginx
 
 ```
-$ ./bin/nginx -g "daemon off;"
+$ make start
+```
+
+## Update nginx.conf and reload nginx
+
+```
+$ make watch
+```
+
+## Tailing nginx logs
+
+```
+$ make tail
 ```
