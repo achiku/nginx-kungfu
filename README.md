@@ -1,4 +1,4 @@
-# sample-nginx-kungfu
+# nginx-kungfu
 
 Practice makes perfect
 
