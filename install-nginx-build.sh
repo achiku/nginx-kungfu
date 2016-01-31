@@ -13,7 +13,3 @@ wget ${DOWNLOAD_URL}/v${VERSION}/nginx-build-darwin-amd64-${VERSION}.tar.gz -O .
     tar xvfz ${VERSION}.tar.gz
     rm ${VERSION}.tar.gz
 )
-
-for d in 'tmp run log work etc'; do
-    mkdir -p ${d}
-done

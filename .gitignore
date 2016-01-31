@@ -61,9 +61,12 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 
+work
 bin
 nginx
 etc
 log
 run
 lock
+luajit
+lualib

@@ -15,9 +15,15 @@ tail:
 	tail -f ./log/access.log ./log/error.log
 
 build:
-	./install-nginx-build.sh
-	export NGINX_KUNGFU_DIR=`pwd` && ./bin/nginx-build -d work -c build-config.sh
-	cd work/nginx/1.9.10/nginx-1.9.10 && make install
+	export NGINX_KUNGFU_DIR=`pwd` && \
+		./bin/nginx-build -d work \
+		-c build-config.sh \
+		-openresty -pcre \
+		-openssl && \
+	for d in 'tmp run log work etc'; do mkdir -p $$d; done && \
+	cd work/openresty/1.9.7.2/ngx_openresty-1.9.7.2 && \
+	make install && \
+	cp nginx.conf ./etc
 
 watch:
 	watchmedo shell-command \
@@ -25,4 +31,4 @@ watch:
 		--command='echo "nginx.conf is modified." && cp ./nginx.conf ./etc/nginx.conf && ./bin/nginx -s reload'
 
 clean:
-	rm -rf bin etc log run tmp work
+	rm -rf etc log run tmp luajit lualib nginx

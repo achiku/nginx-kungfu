@@ -1,4 +1,4 @@
-# nginx-kungfu
+# openresty-kungfu
 
 Practice makes perfect
 

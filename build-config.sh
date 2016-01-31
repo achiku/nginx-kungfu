@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ./configure \
+--prefix=${NGINX_KUNGFU_DIR} \
 --sbin-path=${NGINX_KUNGFU_DIR}/bin/nginx \
 --conf-path=${NGINX_KUNGFU_DIR}/etc/nginx.conf \
 --lock-path=${NGINX_KUNGFU_DIR}/lock/nginx.lock \
@@ -12,3 +13,4 @@
 --http-proxy-temp-path=${NGINX_KUNGFU_DIR}/tmp/proxy-tmp \
 --http-scgi-temp-path=${NGINX_KUNGFU_DIR}/tmp/scgi-tmp \
 --http-uwsgi-temp-path=${NGINX_KUNGFU_DIR}/tmp/uwsgi-tmp \
+-j2 \
